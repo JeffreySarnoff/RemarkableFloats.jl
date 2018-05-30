@@ -1,5 +1,4 @@
-for F in (:sign, :ceil, :floor, :trunc,
-          :acos, :acosd, :acosh, :acot, :acotd, :acoth, :acsc, :acscd, :acsch,
+for F in (:acos, :acosd, :acosh, :acot, :acotd, :acoth, :acsc, :acscd, :acsch,
           :asec, :asecd, :asech, :asin, :asind, :asinh, :atan, :atan2, :atand,
           :atanh, :beta, :cbrt, :cos,:cosc, :cosd, :cosh, :cospi, :cot, :cotd,
           :coth, :csc, :cscd, :csch, :deg2rad, :exp, :exp10, :exp2, :expm1,
