@@ -3,7 +3,7 @@ module RemarkableFloats
 
 export MarkableFloat,
        MarkableF64, MarkableF32, MarkableF16,
-       ismarkable, isunmarked, ismarked,
+       markable, unmarked, marked,
        marking,
        has0marks, has1mark, has2marks, has3marks,
        has0or1marks, has1or2marks, has2or3marks
