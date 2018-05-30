@@ -1,11 +1,14 @@
-ismarkable(x) = false
-ismarkable(x::T) where {N, T<:MarkableFloat{N}} = true
+markable(x) = false
+markable(x::T) where {T<:Base.IEEEFloat} = true
+markable(x::T) where {N, T<:MarkableFloat{N}} = true
 
-isunmarked(x::T) where {N, T<:MarkableFloat{N}} = false
-isunmarked(x::T) where {T<:MarkableFloat{0}} = true
+unmarked(x::T) where {T<:Base.IEEEFloat} = true
+unmarked(x::T) where {N, T<:MarkableFloat{N}} = false
+unmarked(x::T) where {T<:MarkableFloat{0}} = true
 
-ismarked(x::T) where {N, T<:MarkableFloat{N}} = true
-ismarked(x::T) where {T<:MarkableFloat{0}} = false
+marked(x::T) where {T<:Base.IEEEFloat} = false
+marked(x::T) where {N, T<:MarkableFloat{N}} = true
+marked(x::T) where {T<:MarkableFloat{0}} = false
 
 marking(x::T) where {T<:MarkableFloat{0}} = 0
 marking(x::T) where {T<:MarkableFloat{1}} = 1 
