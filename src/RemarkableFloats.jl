@@ -4,7 +4,12 @@ module RemarkableFloats
 
 
 export MarkableFloat,
-       MarkableF64, MarkableF32, MarkableF16
+       MarkableF64, MarkableF32, MarkableF16,
+       ismarkable, isunmarked, ismarked,
+       marking,
+       has0marks, has1mark, has2marks, has3marks,
+       has0or1marks, has1or2marks, has2or3marks
+
 #=
        @mark!, @unmark!, @addmark!, @submark!,
        ismarkable, ismarked, isunmarked,
@@ -40,6 +45,7 @@ const FLOAT32 = Base.Float32
 const FLOAT16 = Base.Float16
 
 include("type/basis.jl")
+include("type/ishas.jl")
 
 include("math/prearith.jl")
 
