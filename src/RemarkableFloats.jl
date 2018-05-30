@@ -15,7 +15,7 @@ export MarkableFloat,
 =#
 
 import Base: reinterpret, hash,
-        promote_rule, convert,
+        promote_type, promote_rule, convert,
         string, show,
 	isfinite, isinf, isnan, issubnormal,
 	signbit, sign, abs, flipsign, copysign,
@@ -43,6 +43,7 @@ const FLOAT16 = Base.Float16
 include("type/basis.jl")
 include("type/ishas.jl")
 include("type/getset.jl")
+include("type/promote.jl")
 include("type/comparison.jl")
 
 include("math/predicates.jl")
