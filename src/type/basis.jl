@@ -40,17 +40,17 @@ MarkableF163(x::Float16) = reinterpret(MarkableF163, x)
 
 const IntFloat = Union{Integer, AbstractFloat}
 
-MarkableF641(x::T) where {T<:IntFloat) = MarkableF641(Float64(x))
-MarkableF642(x::T) where {T<:IntFloat) = MarkableF642(Float64(x))
-MarkableF643(x::T) where {T<:IntFloat) = MarkableF643(Float64(x))
+MarkableF641(x::T) where {T<:IntFloat} = MarkableF641(Float64(x))
+MarkableF642(x::T) where {T<:IntFloat} = MarkableF642(Float64(x))
+MarkableF643(x::T) where {T<:IntFloat} = MarkableF643(Float64(x))
 
-MarkableF321(x::T) where {T<:IntFloat) = MarkableF321(Float32(x))
-MarkableF322(x::T) where {T<:IntFloat) = MarkableF322(Float32(x))
-MarkableF323(x::T) where {T<:IntFloat) = MarkableF323(Float32(x))
+MarkableF321(x::T) where {T<:IntFloat} = MarkableF321(Float32(x))
+MarkableF322(x::T) where {T<:IntFloat} = MarkableF322(Float32(x))
+MarkableF323(x::T) where {T<:IntFloat} = MarkableF323(Float32(x))
 
-MarkableF161(x::T) where {T<:IntFloat) = MarkableF161(Float16(x))
-MarkableF162(x::T) where {T<:IntFloat) = MarkableF162(Float16(x))
-MarkableF163(x::T) where {T<:IntFloat) = MarkableF163(Float16(x))
+MarkableF161(x::T) where {T<:IntFloat} = MarkableF161(Float16(x))
+MarkableF162(x::T) where {T<:IntFloat} = MarkableF162(Float16(x))
+MarkableF163(x::T) where {T<:IntFloat} = MarkableF163(Float16(x))
 
 
 Float64(x::MarkableF641) = reinterpret(Float64, x)
