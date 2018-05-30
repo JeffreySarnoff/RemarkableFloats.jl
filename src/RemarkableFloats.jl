@@ -31,8 +31,12 @@ import Base.Math: acos, acosd, acosh, acot, acotd, acoth, acsc, acscd, acsch,
 	minmax, mod2pi, modf, rad2deg, rem2pi, sec, secd, sech, significand, sin,
 	sinc, sincos, sind, sinh, sinpi, sqrt, tan, tand, tanh
 
-const FLOAT64 = Base.FLOAT64
-const FLOAT32 = Base.FLOAT32
+
+# avoid importing Float64, Float32, Float16 (bad things can happen)
+# use const qualified equivalences instead
+
+const FLOAT64 = Base.Float64
+const FLOAT32 = Base.Float32
 const FLOAT16 = Base.Float16
 
 include("type/basis.jl")
