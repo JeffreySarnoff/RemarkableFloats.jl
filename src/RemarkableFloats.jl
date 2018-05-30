@@ -43,7 +43,12 @@ const FLOAT16 = Base.Float16
 include("type/basis.jl")
 include("type/ishas.jl")
 include("type/getset.jl")
+include("type/comparison.jl")
 
+include("math/predicates.jl")
 include("math/prearith.jl")
+include("math/arith.jl")
+include("math/mathfuncs.jl")
+
 
 end # RemarkableFloats
