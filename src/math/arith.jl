@@ -15,7 +15,7 @@ for F in (:(+), :(-), :(*), :(/), :(\), :(^))
 end
 
 
-for F in (ceil, floor, trunc)
+for F in (:ceil, :floor, :trunc)
     @eval begin
         $F(x::T) where {T<:MarkableFloat64} = T($F(Float64(x)))
         $F(x::T) where {T<:MarkableFloat32} = T($F(Float32(x)))
@@ -23,7 +23,7 @@ for F in (ceil, floor, trunc)
     end
 end
 
-for F in (div, fld, cld, rem, mod)
+for F in (:div, :fld, :cld, :rem, :mod)
     @eval begin
         $F(x::T, y::T) where {T<:MarkableFloat64} = T($F(Float64(x), Float64(y)))
         $F(x::T, y::T) where {T<:MarkableFloat32} = T($F(Float32(x), Float32(y)))
