@@ -6,7 +6,8 @@ export MarkableFloat,
        markable, unmarked, marked,
        marking,
        has0marks, has1mark, has2marks, has3marks,
-       has0or1marks, has1or2marks, has2or3marks
+       has0or1marks, has1or2marks, has2or3marks,
+       has0or2marks, has1or3marks
 
 #=
        @mark!, @unmark!, @addmark!, @submark!,
