@@ -4,17 +4,13 @@ module RemarkableFloats
 export MarkableFloat,
        MarkableF64, MarkableF32, MarkableF16,
        markable, unmarked, marked,
-       marking,
+       getmark,
        has0marks, has1mark, has2marks, has3marks,
        has0or1marks, has1or2marks, has2or3marks,
        has0or2marks, has1or3marks
 
 #=
-       @mark!, @unmark!, @addmark!, @submark!,
-       ismarkable, ismarked, isunmarked,
-       has0marks, has1mark, has2marks, has3marks,
-       has0or1mark, has1or2marks, has2or3marks,
-       getmark, setmark
+       @mark!, @unmark!, @addmark!, @submark!, setmark
 =#
 
 import Base: reinterpret, hash,
