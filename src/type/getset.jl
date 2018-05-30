@@ -14,7 +14,7 @@ getmarkvalue(x::T) where {T<:MarkableFloat{2}} = 2
 getmarkvalue(x::T) where {T<:MarkableFloat{3}} = 3
 
 
-setmarkvalue(x::T, value::Int) =
+@inline setmarkvalue(x::T, value::Int) =
     value in 0:3 ? setmark(x, Marker(value)) : throw(ErrorException("marker value out of range ($value)"))
 
 setmark(x::Float64, ::Type{MARKER0}) = x
