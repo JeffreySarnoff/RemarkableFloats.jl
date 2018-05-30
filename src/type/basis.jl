@@ -25,6 +25,11 @@ const MarkableF162 = MarkableF16{2}
 const MarkableF163 = MarkableF16{3}
 
 
+MarkableF64(x) = MarkableF640(x)
+MarkableF32(x) = MarkableF320(x)
+MarkableF16(x) = MarkableF160(x)
+
+
 MarkableF641(x::Float64) = reinterpret(MarkableF641, x)
 MarkableF642(x::Float64) = reinterpret(MarkableF642, x)
 MarkableF643(x::Float64) = reinterpret(MarkableF643, x)
