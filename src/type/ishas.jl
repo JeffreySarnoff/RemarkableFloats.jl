@@ -32,6 +32,14 @@ has1or2marks(x::T) where {T<:MarkableFloat{1}} = true
 has1or2marks(x::T) where {T<:MarkableFloat{2}} = true
 has1or2marks(x::T) where {N, T<:MarkableFloat{N}} = false
 
+has0or2marks(x::T) where {T<:MarkableFloat{0}} = true
+has0or2marks(x::T) where {T<:MarkableFloat{2}} = true
+has0or2marks(x::T) where {N, T<:MarkableFloat{N}} = false
+
+has1or3marks(x::T) where {T<:MarkableFloat{1}} = true
+has1or3marks(x::T) where {T<:MarkableFloat{3}} = true
+has1or3marks(x::T) where {N, T<:MarkableFloat{N}} = false
+
 has2or3marks(x::T) where {T<:MarkableFloat{2}} = true
 has2or3marks(x::T) where {T<:MarkableFloat{3}} = true
 has2or3marks(x::T) where {N, T<:MarkableFloat{N}} = false
