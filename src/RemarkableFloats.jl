@@ -5,7 +5,7 @@ export MarkableFloat,
        MarkableF64, MarkableF32, MarkableF16,
        Markers, MARKER0, MARKER1, MARKER2, MARKER3,
        markable, unmarked, marked,
-       getmark,
+       getmark, setmark,
        has0marks, has1mark, has2marks, has3marks,
        has0or1marks, has1or2marks, has2or3marks,
        has0or2marks, has1or3marks
