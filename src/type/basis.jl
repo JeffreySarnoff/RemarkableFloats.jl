@@ -3,9 +3,11 @@ abstract type MarkableFloat64{N} <: MarkableFloat{N} end
 abstract type MarkableFloat32{N} <: MarkableFloat{N} end
 abstract type MarkableFloat16{N} <: MarkableFloat{N} end
 
+
 primitive type MarkableF64{N} <: MarkableFloat64{N} 64 end
 primitive type MarkableF32{N} <: MarkableFloat32{N} 32 end
 primitive type MarkableF16{N} <: MarkableFloat16{N} 16 end
+
 
 const MarkableF640 = Float64
 const MarkableF641 = MarkableF64{1}
@@ -22,6 +24,7 @@ const MarkableF161 = MarkableF16{1}
 const MarkableF162 = MarkableF16{2}
 const MarkableF163 = MarkableF16{3}
 
+
 MarkableF641(x::Float64) = reinterpret(MarkableF641, x)
 MarkableF642(x::Float64) = reinterpret(MarkableF642, x)
 MarkableF643(x::Float64) = reinterpret(MarkableF643, x)
@@ -33,6 +36,7 @@ MarkableF323(x::Float32) = reinterpret(MarkableF323, x)
 MarkableF161(x::Float16) = reinterpret(MarkableF161, x)
 MarkableF162(x::Float16) = reinterpret(MarkableF162, x)
 MarkableF163(x::Float16) = reinterpret(MarkableF163, x)
+
 
 const IntFloat = Union{Integer, AbstractFloat}
 
@@ -47,6 +51,7 @@ MarkableF323(x::T) where {T<:IntFloat) = MarkableF323(Float32(x))
 MarkableF161(x::T) where {T<:IntFloat) = MarkableF161(Float16(x))
 MarkableF162(x::T) where {T<:IntFloat) = MarkableF162(Float16(x))
 MarkableF163(x::T) where {T<:IntFloat) = MarkableF163(Float16(x))
+
 
 Float64(x::MarkableF641) = reinterpret(Float64, x)
 Float64(x::MarkableF642) = reinterpret(Float64, x)
@@ -122,8 +127,6 @@ MarkableF161(x::MarkableF322) = MarkableF161(Float16(Float32(x)))
 MarkableF161(x::MarkableF323) = MarkableF161(Float16(Float32(x)))
 
 
-
-
 MarkableF642(x::MarkableF641) = reinterpret(MarkableF642, x)
 MarkableF642(x::MarkableF642) = x
 MarkableF642(x::MarkableF643) = reinterpret(MarkableF642, x)
@@ -159,9 +162,6 @@ MarkableF162(x::MarkableF643) = MarkableF162(Float16(Float64(x)))
 MarkableF162(x::MarkableF321) = MarkableF162(Float16(Float32(x)))
 MarkableF162(x::MarkableF322) = MarkableF162(Float16(Float32(x)))
 MarkableF162(x::MarkableF323) = MarkableF162(Float16(Float32(x)))
-
-
-
 
 
 MarkableF643(x::MarkableF641) = reinterpret(MarkableF643, x)
