@@ -7,8 +7,8 @@ for F in (:sign, :ceil, :floor, :trunc,
           :mod2pi, :modf, :rad2deg, :rem2pi, :sec, :secd, :sech, :significand,
           :sin, :sinc, :sincos, :sind, :sinh, :sinpi, :sqrt, :tan, :tand, :tanh)
     @eval begin
-        $F(x::T) where {T<:MarkableFloat64} = $F(Float64(x))
-        $F(x::T) where {T<:MarkableFloat32} = $F(Float32(x))
-        $F(x::T) where {T<:MarkableFloat16} = $F(Float16(x))
+        $F(x::T) where {T<:MarkableFloat64} = T($F(Float64(x)))
+        $F(x::T) where {T<:MarkableFloat32} = T($F(Float32(x)))
+        $F(x::T) where {T<:MarkableFloat16} = T($F(Float16(x)))
     end
 end
