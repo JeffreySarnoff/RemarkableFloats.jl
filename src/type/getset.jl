@@ -15,7 +15,7 @@ getmarkvalue(x::T) where {T<:MarkableFloat{3}} = 3
 
 
 @inline setmarkvalue(x::T, value::Int) where {T<:Union{Base.IEEEFloat, MarkableFloat}} =
-    value in 0:3 ? setmark(x, Marker(value)) : throw(ErrorException("marker value out of range ($value)"))
+    value in 0:3 ? setmark(x, Marker{value}) : throw(ErrorException("marker value out of range ($value)"))
 
 setmark(x::Float64, ::Type{MARKER0}) = x
 setmark(x::Float32, ::Type{MARKER0}) = x
