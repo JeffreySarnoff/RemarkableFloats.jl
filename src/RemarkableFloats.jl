@@ -41,6 +41,7 @@ const FLOAT16 = Base.Float16
 
 include("type/basis.jl")
 include("type/ishas.jl")
+include("type/getset.jl")
 
 include("math/prearith.jl")
 
