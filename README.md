@@ -1,5 +1,7 @@
 # RemarkableFloats.jl
 
+### _(work in process)_
+
 #### These IEEE Floats may be marked, cleared, remarked with any one of a few colors/tags.
 
 - The coloring, erasing, and inquiring are resolved immediately. 
