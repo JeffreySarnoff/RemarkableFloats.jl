@@ -1,9 +1,21 @@
-getmark(x::T) where {T<:Base.IEEEFloat} = 0
+getmark(x::T) where {T<:Base.IEEEFloat} = MARKER0
 
-getmark(x::T) where {T<:MarkableFloat{0}} = 0
-getmark(x::T) where {T<:MarkableFloat{1}} = 1 
-getmark(x::T) where {T<:MarkableFloat{2}} = 2 
-getmark(x::T) where {T<:MarkableFloat{3}} = 3
+getmark(x::T) where {T<:MarkableFloat{0}} = MARKER0
+getmark(x::T) where {T<:MarkableFloat{1}} = MARKER1
+getmark(x::T) where {T<:MarkableFloat{2}} = MARKER2
+getmark(x::T) where {T<:MarkableFloat{3}} = MARKER3
+
+
+getmarkvalue(x::T) where {T<:Base.IEEEFloat} = 0
+
+getmarkvalue(x::T) where {T<:MarkableFloat{0}} = 0
+getmarkvalue(x::T) where {T<:MarkableFloat{1}} = 1 
+getmarkvalue(x::T) where {T<:MarkableFloat{2}} = 2 
+getmarkvalue(x::T) where {T<:MarkableFloat{3}} = 3
+
+
+setmarkvalue(x::T, value::Int) =
+    value in 0:3 ? setmark(x, Marker(value)) : throw(ErrorException("marker value out of range ($value)"))
 
 setmark(x::Float64, ::Type{MARKER0}) = x
 setmark(x::Float32, ::Type{MARKER0}) = x
