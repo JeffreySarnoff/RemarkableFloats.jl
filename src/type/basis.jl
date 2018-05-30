@@ -1,3 +1,13 @@
+abstract type Markers end
+struct Marker{N} <: Markers end
+
+const MARKER0 = Marker{0}
+const MARKER1 = Marker{1}
+const MARKER2 = Marker{2}
+const MARKER3 = Marker{3}
+
+
+
 abstract type MarkableFloat{N}   <: AbstractFloat end
 abstract type MarkableFloat64{N} <: MarkableFloat{N} end
 abstract type MarkableFloat32{N} <: MarkableFloat{N} end
