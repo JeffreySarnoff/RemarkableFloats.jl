@@ -10,11 +10,6 @@ marked(x::T) where {T<:Base.IEEEFloat} = false
 marked(x::T) where {N, T<:MarkableFloat{N}} = true
 marked(x::T) where {T<:MarkableFloat{0}} = false
 
-marking(x::T) where {T<:MarkableFloat{0}} = 0
-marking(x::T) where {T<:MarkableFloat{1}} = 1 
-marking(x::T) where {T<:MarkableFloat{2}} = 2 
-marking(x::T) where {T<:MarkableFloat{3}} = 3
-
 has0marks(x::T) where {T<:MarkableFloat{0}} = true
 has0marks(x::T) where {N, T<:MarkableFloat{N}} = false
 has1mark(x::T) where {T<:MarkableFloat{1}} = true
