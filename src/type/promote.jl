@@ -1,3 +1,11 @@
+promote_type(::Type{Float64}, ::Type{Union{}}) = Float64
+promote_type(::Type{Float32}, ::Type{Union{}}) = Float32
+promote_type(::Type{Float16}, ::Type{Union{}}) = Float16
+
+promote_type(::Type{T}, ::Type{Union{}}) where {T<:MarkableFloat64} = T
+promote_type(::Type{T}, ::Type{Union{}}) where {T<:MarkableFloat32} = T
+promote_type(::Type{T}, ::Type{Union{}}) where {T<:MarkableFloat16} = T
+
 promote_type(::Type{Float64}, ::Type{T}) where {T<:MarkableFloat64} = T
 promote_type(::Type{MarkableF640}, ::Type{MarkableF641}) = MarkableF641
 promote_type(::Type{MarkableF640}, ::Type{MarkableF642}) = MarkableF642
