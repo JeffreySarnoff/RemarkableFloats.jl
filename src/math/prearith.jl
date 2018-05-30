@@ -1,4 +1,4 @@
-for F in (signbit, sign)
+for F in (:signbit, :sign)
     @eval begin
         $F(x::T) where {T<:MarkableFloat64} = $F(Float64(x))
         $F(x::T) where {T<:MarkableFloat32} = $F(Float32(x))
@@ -6,7 +6,7 @@ for F in (signbit, sign)
     end
 end
 
-for F in (abs, float)
+for F in (:abs, :float)
     @eval begin
         $F(x::T) where {T<:MarkableFloat64} = T($F(Float64(x)))
         $F(x::T) where {T<:MarkableFloat32} = T($F(Float32(x)))
@@ -15,7 +15,7 @@ for F in (abs, float)
 end
 
 
-for F in (flipsign, copysign)
+for F in (:flipsign, :copysign)
     @eval begin
         $F(x::T, y::T) where {T<:MarkableFloat64} = T($F(Float64(x), Float64(y)))
         $F(x::T, y::T) where {T<:MarkableFloat32} = T($F(Float32(x), Float32(y)))
