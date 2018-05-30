@@ -3,7 +3,8 @@ __precompile__()
 module RemarkableFloats
 
 
-export RemarkableF64, RemarkableF32, RemarkableF16,
+export MarkableFloat,
+       MarkableF64, MarkableF32, MarkableF16,
        @mark!, @unmark!, @addmark!, @submark!,
        ismarked, isunmarked,
        has0marks, has1mark, has2marks, has3marks,
