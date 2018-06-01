@@ -40,7 +40,8 @@ const FLOAT64 = Base.Float64
 const FLOAT32 = Base.Float32
 const FLOAT16 = Base.Float16
 
-include("type/basis.jl")
+include("type/markings.jl")
+include("type/floatbasis.jl")
 include("type/ishas.jl")
 include("type/getset.jl")
 include("type/promote.jl")
