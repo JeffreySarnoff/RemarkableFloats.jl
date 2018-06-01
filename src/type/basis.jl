@@ -1,6 +1,6 @@
 abstract type Marker end
 struct ʊ{N} <: Marker end
-
+const ʊ₂ = ʊ{2}
 # ʊ₀   ʊ₁   ʊ₂     ʊ₃ 
 
 const ʊ₀ = Marker{0}
