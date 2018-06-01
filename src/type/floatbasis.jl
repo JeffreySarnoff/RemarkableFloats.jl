@@ -1,23 +1,4 @@
-abstract type       AbstractMarker end
-struct Marker{N} <: AbstractMarker end
-
-const ʊ₀ = Marker{0}
-const ʊ₁ = Marker{1}
-const ʊ₂ = Marker{2}
-const ʊ₃ = Marker{3}
-
-
-abstract type       AbstractMarker end
-struct   Mark{N} <: AbstractMarker end
-
-const MARK0 = ʊ{0}
-const MARK1 = ʊ{1}
-const MARK2 = ʊ{2}
-const MARK3 = ʊ{3}
-
-Base.string(x::T) where {N, T<:Mark{N}} = string("ʊ",
-
-abstract type MarkableFloat{N}   <: AbstractFloat end
+abstract type MarkableFloat{N}   <: AbstractFloat    end
 abstract type MarkableFloat64{N} <: MarkableFloat{N} end
 abstract type MarkableFloat32{N} <: MarkableFloat{N} end
 abstract type MarkableFloat16{N} <: MarkableFloat{N} end
