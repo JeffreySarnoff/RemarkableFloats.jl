@@ -21,3 +21,13 @@ Meta.parse("Marker0") = Marker0 ; Meta.parse("ʊ₀") = Marker0
 Meta.parse("Marker1") = Marker1 ; Meta.parse("ʊ₁") = Marker1
 Meta.parse("Marker2") = Marker2 ; Meta.parse("ʊ₂") = Marker2
 Meta.parse("Marker3") = Marker3 ; Meta.parse("ʊ₃") = Marker3
+
+parse(::Type{T}, "Marker0") where {T<:Marker} = Marker0
+parse(::Type{T}, "Marker1") where {T<:Marker} = Marker1
+parse(::Type{T}, "Marker2") where {T<:Marker} = Marker2
+parse(::Type{T}, "Marker3") where {T<:Marker} = Marker3
+
+parse(::Type{T}, "ʊ₀") where {T<:Marker} = Marker0
+parse(::Type{T}, "ʊ₁") where {T<:Marker} = Marker1
+parse(::Type{T}, "ʊ₂") where {T<:Marker} = Marker2
+parse(::Type{T}, "ʊ₃") where {T<:Marker} = Marker3
