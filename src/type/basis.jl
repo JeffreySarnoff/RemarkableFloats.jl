@@ -1,12 +1,19 @@
-abstract type Marker end
-struct ʊ{N} <: Marker end
-const ʊ₂ = ʊ{2}
-# ʊ₀   ʊ₁   ʊ₂     ʊ₃ 
+abstract type       AbstractMarker end
+struct Marker{N} <: AbstractMarker end
 
 const ʊ₀ = Marker{0}
 const ʊ₁ = Marker{1}
 const ʊ₂ = Marker{2}
 const ʊ₃ = Marker{3}
+
+
+abstract type    AbstractMarker end
+struct   ʊ{N} <: AbstractMarker end
+
+const AT0 = ʊ{0}
+const AT1 = ʊ{1}
+const AT2 = ʊ{2}
+const AT3 = ʊ{3}
 
 
 
