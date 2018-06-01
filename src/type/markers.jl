@@ -17,9 +17,7 @@ show(io::IO, ::Type{Marker1}) = print(io, string(Marker1))
 show(io::IO, ::Type{Marker2}) = print(io, string(Marker2))
 show(io::IO, ::Type{Marker3}) = print(io, string(Marker3))
 
-parse(Marker, "Marker0") = Marker0a> ʊ˜ = 5
-
-parse(Marker, "Marker1") = Marker1
-parse(Marker, "Marker2") = Marker2
-parse(Marker, "Marker3") = Marker3
-
+Meta.parse("Marker0") = Marker0 ; Meta.parse("ʊ₀") = Marker0
+Meta.parse("Marker1") = Marker1 ; Meta.parse("ʊ₁") = Marker1
+Meta.parse("Marker2") = Marker2 ; Meta.parse("ʊ₂") = Marker2
+Meta.parse("Marker3") = Marker3 ; Meta.parse("ʊ₃") = Marker3
