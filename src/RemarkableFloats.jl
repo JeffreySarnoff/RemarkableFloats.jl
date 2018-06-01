@@ -16,7 +16,7 @@ export MarkableFloat,
 
 import Base: reinterpret, hash,
         promote_type, promote_rule, convert,
-        string, show,
+        string, show, parse,
 	isfinite, isinf, isnan, issubnormal,
 	signbit, sign, abs, flipsign, copysign,
 	(==), (!=), (<), (<=), (>=), (>), isequal, isless,
