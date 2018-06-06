@@ -38,3 +38,21 @@ b16 = setmark(a16, Marker3)
 @test has2or3marks(b16)
 @test has1or3marks(b16)
 
+
+
+a64 = Float64(0.5)
+a32 = Float32(0.5)
+a16 = Float16(0.5)
+
+@setmark!(a64, Marker2)
+@incrmark!(a32)
+
+@test has2marks(a64)
+@test has1mark(a32)
+
+@decrmark!(a64)
+@unmark!(a32)
+
+@test has1mark(a64)
+@test has0marks(a32)
+
