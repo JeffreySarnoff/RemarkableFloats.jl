@@ -3,7 +3,7 @@ module RemarkableFloats
 
 export Markers, MarkableFloat,
        MarkableF64, MarkableF32, MarkableF16,
-       MARKER0, MARKER1, MARKER2, MARKER3,
+       Marker0, Marker1, Marker2, Marker3,
        ʊ₀, ʊ₁, ʊ₂, ʊ₃,
        markable, unmarked, marked,
        getmark, setmark, getmarkvalue, setmarkvalue,
