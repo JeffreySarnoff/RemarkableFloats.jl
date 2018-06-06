@@ -17,7 +17,7 @@ export Markers, MarkableFloat,
 
 import Base: reinterpret, hash,
         promote_type, promote_rule, convert,
-        string, show, parse, Meta.parse,
+        string, show,
 	isfinite, isinf, isnan, issubnormal,
 	signbit, sign, abs, flipsign, copysign,
 	(==), (!=), (<), (<=), (>=), (>), isequal, isless,
