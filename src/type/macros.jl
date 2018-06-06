@@ -6,7 +6,7 @@ end
 
 macro decrmark!(x)
     quote
-        $(esc(x)) = incrmark($(esc(x)))
+        $(esc(x)) = decrmark($(esc(x)))
     end
 end
 
