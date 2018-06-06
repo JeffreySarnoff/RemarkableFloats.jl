@@ -7,6 +7,7 @@ export Markers, MarkableFloat,
        ʊ₀, ʊ₁, ʊ₂, ʊ₃,
        markable, unmarked, marked,
        getmark, setmark, getmarkvalue, setmarkvalue,
+       incrmark, decrmark,
        has0marks, has1mark, has2marks, has3marks,
        has0or1marks, has1or2marks, has2or3marks,
        has0or2marks, has1or3marks
@@ -47,6 +48,7 @@ include("type/ishas.jl")
 include("type/getset.jl")
 include("type/promote.jl")
 include("type/comparison.jl")
+include("type/incrdecr.jl")
 
 include("math/predicates.jl")
 include("math/prearith.jl")
