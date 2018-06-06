@@ -1,36 +1,35 @@
 incrmark(x::Float64)   = setmark(x, Marker1)
-incrmark(x::Float640) = setmark(x, Marker1)
-incrmark(x::Float641) = setmark(x, Marker2)
-incrmark(x::Float642) = setmark(x, Marker3)
-incrmark(x::Float643) = x
+incrmark(x::MarkableF640) = setmark(x, Marker1)
+incrmark(x::MarkableF641) = setmark(x, Marker2)
+incrmark(x::MarkableF642) = setmark(x, Marker3)
+incrmark(x::MarkableF643) = x
 
 decrmark(x::Float64)  = x
-decrmark(x::Float640) = x
-decrmark(x::Float641) = setmark(x, Marker0)
-decrmark(x::Float642) = setmark(x, Marker1)
-decrmark(x::Float643) = setmark(x, Marker2)
+decrmark(x::MarkableF640) = x
+decrmark(x::MarkableF641) = setmark(x, Marker0)
+decrmark(x::MarkableF642) = setmark(x, Marker1)
+decrmark(x::MarkableF643) = setmark(x, Marker2)
 
 incrmark(x::Float32)   = setmark(x, Marker1)
-incrmark(x::Float320) = setmark(x, Marker1)
-incrmark(x::Float321) = setmark(x, Marker2)
-incrmark(x::Float322) = setmark(x, Marker3)
-incrmark(x::Float323) = x
+incrmark(x::MarkableF320) = setmark(x, Marker1)
+incrmark(x::MarkableF321) = setmark(x, Marker2)
+incrmark(x::MarkableF322) = setmark(x, Marker3)
+incrmark(x::MarkableF323) = x
 
 decrmark(x::Float32)  = x
-decrmark(x::Float320) = x
-decrmark(x::Float321) = setmark(x, Marker0)
-decrmark(x::Float322) = setmark(x, Marker1)
-decrmark(x::Float323) = setmark(x, Marker2)
-
+decrmark(x::MarkableF320) = x
+decrmark(x::MarkableF321) = setmark(x, Marker0)
+decrmark(x::MarkableF322) = setmark(x, Marker1)
+decrmark(x::MarkableF323) = setmark(x, Marker2)
 
 incrmark(x::Float16)   = setmark(x, Marker1)
-incrmark(x::Float160) = setmark(x, Marker1)
-incrmark(x::Float161) = setmark(x, Marker2)
-incrmark(x::Float162) = setmark(x, Marker3)
-incrmark(x::Float163) = x
+incrmark(x::MarkableF160) = setmark(x, Marker1)
+incrmark(x::MarkableF161) = setmark(x, Marker2)
+incrmark(x::MarkableF162) = setmark(x, Marker3)
+incrmark(x::MarkableF163) = x
 
 decrmark(x::Float16)  = x
-decrmark(x::Float160) = x
-decrmark(x::Float161) = setmark(x, Marker0)
-decrmark(x::Float162) = setmark(x, Marker1)
-decrmark(x::Float163) = setmark(x, Marker2)
+decrmark(x::MarkableF160) = x
+decrmark(x::MarkableF161) = setmark(x, Marker0)
+decrmark(x::MarkableF162) = setmark(x, Marker1)
+decrmark(x::MarkableF163) = setmark(x, Marker2)
