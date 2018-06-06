@@ -101,3 +101,22 @@ setmark(x::MarkableF643, ::Type{Marker3}) = x
 setmark(x::MarkableF323, ::Type{Marker3}) = x
 setmark(x::MarkableF163, ::Type{Marker3}) = x
 
+unmark(x::Float64) = x
+unmark(x::Float32) = x
+unmark(x::Float16) = x
+
+unmark(x::MarkableF640) = x
+unmark(x::MarkableF320) = x
+unmark(x::MarkableF160) = x
+
+unmark(x::MarkableF641) = Float64(x)
+unmark(x::MarkableF321) = Float32(x)
+unmark(x::MarkableF161) = Float16(x)
+
+unmark(x::MarkableF642) = Float64(x)
+unmark(x::MarkableF322) = Float32(x)
+unmark(x::MarkableF162) = Float16(x)
+
+unmark(x::MarkableF643) = Float64(x)
+unmark(x::MarkableF323) = Float32(x)
+unmark(x::MarkableF163) = Float16(x)
