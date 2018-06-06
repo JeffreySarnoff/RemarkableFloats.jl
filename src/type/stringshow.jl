@@ -13,18 +13,8 @@ string(x::MarkableF161) = string(Float16(x),"₁")
 string(x::MarkableF162) = string(Float16(x),"₂")
 string(x::MarkableF163) = string(Float16(x),"₃")
 
-
-show(io::IO, x::MarkableF640) = print(io, string(x))
-show(io::IO, x::MarkableF641) = print(io, string(x))
-show(io::IO, x::MarkableF642) = print(io, string(x))
-show(io::IO, x::MarkableF643) = print(io, string(x))
-
-show(io::IO, x::MarkableF320) = print(io, string(x))
-show(io::IO, x::MarkableF321) = print(io, string(x))
-show(io::IO, x::MarkableF322) = print(io, string(x))
-show(io::IO, x::MarkableF323) = print(io, string(x))
-
-show(io::IO, x::MarkableF160) = print(io, string(x))
-show(io::IO, x::MarkableF161) = print(io, string(x))
-show(io::IO, x::MarkableF162) = print(io, string(x))
-show(io::IO, x::MarkableF163) = print(io, string(x))
+for T in (:MarkableF640, :MarkableF641, :MarkableF642, :MarkableF643,
+          :MarkableF320, :MarkableF321, :MarkableF322, :MarkableF323,
+          :MarkableF160, :MarkableF161, :MarkableF162, :MarkableF163)
+    @eval show(io::IO, x::$T) = print(io, string(x))
+end
