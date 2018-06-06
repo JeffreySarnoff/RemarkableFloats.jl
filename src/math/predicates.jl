@@ -1,4 +1,4 @@
-for F in (:signbit, :isfinite, :isinf, :isnan, :issubnormal)
+for F in (:isfinite, :isinf, :isnan, :issubnormal)
     @eval begin
         $F(x::T) where {T<:MarkableFloat64} = $F(Float64(x))
         $F(x::T) where {T<:MarkableFloat32} = $F(Float32(x))
