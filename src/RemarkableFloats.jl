@@ -53,6 +53,7 @@ include("type/promote.jl")
 include("type/comparison.jl")
 include("type/incrdecr.jl")
 include("type/macros.jl")
+include("type/stringshow.jl")
 
 include("math/predicates.jl")
 include("math/prearith.jl")
