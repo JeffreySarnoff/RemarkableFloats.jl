@@ -35,16 +35,17 @@ for F in (:ceil, :floor, :trunc, :round)
         $F(x::T) where {T<:MarkableFloat64} = T($F(Float64(x)))
         $F(x::T) where {T<:MarkableFloat32} = T($F(Float32(x)))
         $F(x::T) where {T<:MarkableFloat16} = T($F(Float16(x)))
-        
+
         $F(::Type{I}, x::T) where {T<:MarkableFloat64, I<:Integer} = $F(I, Float64(x))
         $F(::Type{I}, x::T) where {T<:MarkableFloat32, I<:Integer} = $F(I, Float32(x))
         $F(::Type{I}, x::T) where {T<:MarkableFloat16, I<:Integer} = $F(I, Float16(x))
-        
+
         $F(::Type{Integer}, x::T) where {T<:MarkableFloat64} = $F(Int, Float64(x))
         $F(::Type{Integer}, x::T) where {T<:MarkableFloat32} = $F(Int, Float32(x))
-        $F(::Type{Integer}, x::T) where {T<:MarkableFloat16} = $F(Int, Float16(x))    
+        $F(::Type{Integer}, x::T) where {T<:MarkableFloat16} = $F(Int, Float16(x))
     end
 end
+
 
 for F in (:div, :fld, :cld, :rem, :mod)
     @eval begin
