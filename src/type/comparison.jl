@@ -11,5 +11,13 @@ for F in (:(==), :(!=), :(<), :(<=), :(>=), :(>), :isequal, :isless)
         $F(x::R, y::T) where {T<:MarkableFloat64, R<:AbstractFloat} = $F(Float64(x), Float64(y))
         $F(x::R, y::T) where {T<:MarkableFloat32, R<:AbstractFloat} = $F(Float32(x), Float32(y))
         $F(x::R, y::T) where {T<:MarkableFloat16, R<:AbstractFloat} = $F(Float16(x), Float16(y))
+
+        $F(x::T, y::R) where {T<:MarkableFloat64, R<:Integer} = $F(Float64(x), Float64(y))
+        $F(x::T, y::R) where {T<:MarkableFloat32, R<:Integer} = $F(Float32(x), Float32(y))
+        $F(x::T, y::R) where {T<:MarkableFloat16, R<:Integer} = $F(Float16(x), Float16(y))
+
+        $F(x::R, y::T) where {T<:MarkableFloat64, R<:Integer} = $F(Float64(x), Float64(y))
+        $F(x::R, y::T) where {T<:MarkableFloat32, R<:Integer} = $F(Float32(x), Float32(y))
+        $F(x::R, y::T) where {T<:MarkableFloat16, R<:Integer} = $F(Float16(x), Float16(y))
     end
 end
