@@ -18,6 +18,14 @@ for F in (:(+), :(-), :(*), :(/), :(\), :(^))
         $F(x::R, y::T) where {T<:MarkableFloat64, R<:AbstractFloat} = T($F(Float64(x), Float64(y)))
         $F(x::R, y::T) where {T<:MarkableFloat32, R<:AbstractFloat} = T($F(Float32(x), Float32(y)))
         $F(x::R, y::T) where {T<:MarkableFloat16, R<:AbstractFloat} = T($F(Float16(x), Float16(y)))
+        
+        $F(x::T, y::R) where {T<:MarkableFloat64, R<:Integer} = T($F(Float64(x), Float64(y)))
+        $F(x::T, y::R) where {T<:MarkableFloat32, R<:Integer} = T($F(Float32(x), Float32(y)))
+        $F(x::T, y::R) where {T<:MarkableFloat16, R<:Integer} = T($F(Float16(x), Float16(y)))
+
+        $F(x::R, y::T) where {T<:MarkableFloat64, R<:Integer} = T($F(Float64(x), Float64(y)))
+        $F(x::R, y::T) where {T<:MarkableFloat32, R<:Integer} = T($F(Float32(x), Float32(y)))
+        $F(x::R, y::T) where {T<:MarkableFloat16, R<:Integer} = T($F(Float16(x), Float16(y)))
     end
 end
 
