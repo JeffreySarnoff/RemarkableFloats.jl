@@ -1,0 +1,13 @@
+name = "RemarkableFloats"
+uuid = "6f98a364-6c54-48e5-8625-65ff1d686149"
+author = "Jeffrey A. Sarnoff <jeffrey.sarnoff@gmail.com>"
+version = "0.1.0"
+
+[compat]
+julia = "1.8"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
