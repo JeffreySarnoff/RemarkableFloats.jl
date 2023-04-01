@@ -11,7 +11,7 @@
 ----
 
 
-#### Copyright © 2015-2018 by Jeffrey Sarnoff. This work is made available under The MIT License.
+#### Copyright © 2015-2023 by Jeffrey Sarnoff. This work is made available under The MIT License.
 
 
 ----
