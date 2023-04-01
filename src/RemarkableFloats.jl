@@ -1,5 +1,3 @@
-__precompile__()
-
 module RemarkableFloats
 
 
@@ -30,13 +28,12 @@ import Base: reinterpret, hash,
 	ceil, floor, trunc, float
 
 import Base.Math: acos, acosd, acosh, acot, acotd, acoth, acsc, acscd, acsch,
-	asec, asecd, asech, asin, asind, asinh, atan, atan2, atand, tanh, beta,
+	asec, asecd, asech, asin, asind, asinh, atan, atand, tanh,
 	cbrt, clamp, clamp!, cos, cosc, cosd, cosh, cospi, cot, cotd, coth, csc,
-	cscd, csch, deg2rad, exp, exp10, exp2, expm1, exponent, frexp, gamma,
-	hypot, lbeta, ldexp, lfact, lgamma, log, log10, log1p, log2, max, min,
+	cscd, csch, deg2rad, exp, exp10, exp2, expm1, exponent, frexp,
+	hypot, ldexp, log, log10, log1p, log2, max, min,
 	minmax, mod2pi, modf, rad2deg, rem2pi, sec, secd, sech, significand, sin,
 	sinc, sincos, sind, sinh, sinpi, sqrt, tan, tand, tanh
-
 
 # avoid importing Float64, Float32, Float16 (bad things can happen)
 # use const qualified equivalences instead
