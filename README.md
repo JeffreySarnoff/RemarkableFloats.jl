@@ -1,5 +1,6 @@
 # RemarkableFloats.jl
 
+## _{ not ready for public use }_
 ### _(work in process)_
 
 #### These IEEE Floats may be marked, cleared, remarked with any one of a few colors/tags.
